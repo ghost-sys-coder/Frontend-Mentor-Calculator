@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout</title>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="logo"><h1>calc</h1></div>
+            <div class="theme--switcher">
+                <div class="theme--text"><h2>THEME</h2></div>
+                <div class="theme__switch--container">
+                    <div class="numbers--container">
+                        <div class="theme--numbers">1</div>
+                        <div class="theme--numbers">2</div>
+                        <div class="theme--numbers">3</div>
+                    </div>
+                    <div class="buttons--container">
+                        <div class="themeBtn active" id="dark-theme"></div>
+                        <div class="themeBtn" id="light-theme"></div>
+                        <div class="themeBtn" id="middle-theme"></div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section class="input--output">
+            <div data-previous-operand class="input"></div>
+            <div data-current-operand class="output"></div>
+        </section>
+        <section class="keypad">
+            <div class="key--number" data-number>7</div>
+            <div class="key--number" data-number>8</div>
+            <div class="key--number" data-number>9</div>
+            <div class="key--number" data-delete>del</div>
+            <div class="key--number" data-number>4</div>
+            <div class="key--number" data-number>5</div>
+            <div class="key--number" data-number>6</div>
+            <div class="key--number" data-operand>+</div>
+            <div class="key--number" data-number>1</div>
+            <div class="key--number" data-number>2</div>
+            <div class="key--number" data-number>3</div>
+            <div class="key--number" data-operand>-</div>
+            <div class="key--number" data-number>.</div>
+            <div class="key--number" data-number>0</div>
+            <div class="key--number" data-operand>/</div>
+            <div class="key--number" data-operand>x</div>
+
+            <div class="key--number span--two reset" id="reset" data-reset>Reset</div>
+            <div class="key--number span--two equals" id="equals" data-equals>=</div>
+        </section>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,333 @@
+/* IMPORT GOOGLE FONTS --- LEAGUE SPARTANS */
+
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700&display=swap');
+
+/* CSS ROOT VARIABLES */
+:root {
+    /* Neutral Colors */
+    --textColor: #fff;
+    --blackColor: #000;
+    /** 
+        *!MAIN THEME -- COLORS
+    */
+    /* BACKGROUND COLORS */
+
+    --body-background: hsl(222, 26%, 31%) ;
+    --veryDarkDesaturatedBlue-keypad-BCG-First: hsl(223, 31%, 20%);
+    --screen--background: hsl(224, 36%, 15%);
+    --keypadBCG: var(--veryDarkDesaturatedBlue-keypad-BCG-First);
+    /* KEYS */
+    --desaturatedDarkBlue-keyBCG-First: hsl(225, 21%, 49%);
+    --desaturatedDarkBlue--keyShadow-First: hsl(224, 28%, 35%);
+    --toggleRed--keyBCG-First: hsl(6, 63%, 50%);
+    --shadow-Key-DarkRed-First: hsl(6, 70%, 34%);
+    --lightGrayishOrange--keyBCG-First: hsl(30, 25%, 89%);
+    --grayishOrange--keyShadow-First: hsl(28, 16%, 65%);
+     
+
+    --equalBtnColor: var(--whiteText);
+    --equalBtnBCG: var(--toggleRed--keyBCG-First);
+    --keyNumberColor: var(--blackColor);
+    --keyNumberBCG: var(--whiteText);
+    --resetBtnBCG: var(--desaturatedDarkBlue--keyShadow-First);
+    --delBtnBCG: var(--desaturatedDarkBlue--keyShadow-First);
+    --themeToggleBtn: var(--toggleRed--keyBCG-First);
+    --keyBoxShadow: 5px 5px 5px var(--delBtnBCG);
+
+    /* TEXT */
+    --veryDarkGrayishBlue-First: hsl(221, 14%, 31%);
+    --whiteText: #fff;
+
+    /** 
+        *! THEME TWO -- COLORS
+    */
+    /* BACKGROUND COLORS */
+    --lightGray-mainBCG-Two: hsl(0, 0%, 90%);
+    --GrayishRed-toggleBCG--keypadBCG-Two: hsl(0, 5%, 81%);
+    --veryLightGray--screenBCG-Two: hsl(0, 0%, 93%);
+
+    /* KEYS */
+    --veryDarkCyan--keyShadow-Two: hsl(185, 58%, 25%);
+    --toggle-Orange-keyShadow-Two: hsl(25, 98%, 40%);
+    --darkOrange--keyShadow-Two: hsl(25, 99%, 27%);
+    --lightGrayishYellow--keyBCG-Two: hsl(45, 7%, 89%);
+    --darkGrayishOrange--keyShadow-Two: hsl(35, 11%, 61%);
+
+    /* TEXT */
+    --veryDarkGrayishYellow-Two: hsl(60, 10%, 19%);
+    --whiteText-Two: hsl(0, 0, 100%);
+
+    /** 
+        *! THEME THREE
+    */
+    /* BACKGROUND COLORS */
+    --veryDarkViolet-mainBCG-Third: hsl(268, 75%, 9%);
+    --veryDarkViolet-toggleBCG-keypadBCG-screenBCG-Third: hsl(268, 71%, 12%);
+
+    /* KEYS */
+    --darkVioley-keyBCG-Third: hsl(281, 89%, 26%);
+    --vividMagenta-keyShadow-Third: hsl(285, 91%, 52%);
+    --togglePureCyan-keyBCG-Third: hsl(176, 100%, 44%);
+    --softCyan-keyShadow-Third:hsl(177, 92%, 70%);
+    --veryDarkViolet-keyBCG-Third: hsl(268, 47%, 21%);
+    --darkMagenta-keyShadow: hsl(290, 70%, 36%);
+
+    /* TEXT */
+    --lightYellow-Third: hsl(52, 100%, 62%);
+    --veryDarkBlue-Third: hsl(198, 20%, 13%);
+    --whiteText-Third: hsl(0, 0, 100%)
+
+}
+
+* {
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+}
+
+body {
+    background-color: var(--body-background);
+    font-family: 'League Spartan', sans-serif;
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    box-shadow: 20px 20px 15px  10px rgba(0,0,0,0.4);
+    border: 1px solid aliceblue;
+    height: 500px;
+    width: 90%;
+    max-width: 300px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+    transition: all 0.9s ease;
+}
+/* HEADER STYLES START */
+.header {
+    width: 100%;
+    flex-basis: 20%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    height: 100%;
+    color: var(--textColor);
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex: 1;
+}
+.theme--switcher {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex: 1;
+    gap: 10px;
+}
+
+.theme--text {
+    height: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex: 1;
+    color: var(--textColor);
+}
+.theme__switch--container {
+    height: inherit;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    gap: 10px;
+}
+.numbers--container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+.theme--numbers {
+    color: var(--textColor);
+}
+.buttons--container {
+    background-color: var(--screen--background);
+    border: 1px solid silver;
+    border-radius: 25px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+.themeBtn {
+    background-color: var(--themeToggleBtn);
+    height: 10px;
+    width: 10px;
+    border: 1px solid var(--whiteText);
+    border-radius: 50%;
+    cursor: pointer;
+}
+.themeBtn:not(:first-of-type) {
+    background-color: transparent;
+}
+.active {
+    display: block;
+}
+
+/* HEADER STYLES END */
+
+/* INPUT SECTION STYLES START */
+
+.input--output {
+    background-color: var(--screen--background);
+    width: 100%;
+    flex-basis: 20%;
+    border-radius: 10px;
+    color: var(--textColor);
+    font-size: 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.input {
+    background-color: transparent;
+    color: var(--textColor);
+    flex-basis: 60%;
+    width: 100%;
+    border-bottom: 1px dashed var(--textColor);
+    font-size: 1.2rem;
+    padding-left: .5rem;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+.output {
+    background-color: transparent;
+    width: 100%;
+    flex-basis: 40%;
+    font-size: 1.2rem;
+
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+/* INPUT SECTION STYLES END */
+
+.keypad {
+    background-color: var(--keypadBCG);
+    width: 100%;
+    flex-basis: 50%;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.span--two {
+    grid-column: span 2;
+}
+.key--number {
+    box-shadow: var(--keyBoxShadow);
+    padding: .5rem;
+    background-color: var(--keyNumberBCG);
+    color: var(--keyNumberColor);
+    border-radius: 5px;
+    font-size: 1.2rem;
+    font-weight: 800;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.key--number:hover {
+    transform: scale(1.1);
+}
+.deleteButton {
+    text-transform: uppercase;
+    background-color: var(--delBtnBCG);
+    color: var(--whiteText);
+}
+
+
+.reset {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: var(--whiteText);
+    font-size: 1rem;
+    font-weight: 800;
+    border-radius: 10px;
+    text-transform: uppercase;
+    background-color: var(--resetBtnBCG);
+}
+
+.reset:hover {
+    transform: scale(0.9);
+}
+.equals {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    color: var(--equalBtnColor);
+    font-size: 1.5rem;
+    font-weight: 800;
+    border-radius: 10px;
+    background-color: var(--equalBtnBCG);
+}
+.equals:hover {
+    transform: scale(0.9);
+}
+
+/* CHANGING THEME STYLES */
+
+.lightTheme{
+    --body-background: var(--lightGray-mainBCG-Two);
+    --screen--background: var(--whiteText);
+    --textColor: var(--blackColor);
+    --keypadBCG: var(--GrayishRed-toggleBCG--keypadBCG-Two);
+    --resetBtnBCG: var(--veryDarkCyan--keyShadow-Two);
+    --delBtnBCG: var(--resetBtnBCG);
+    --equalBtnBCG: var(--toggle-Orange-keyShadow-Two);
+}
+.middleTheme {
+    --body-background: hsl(268, 75%, 9%);
+    --screen--background: hsl(268, 71%, 12%);
+    --textColor: hsl(52, 100%, 62%);
+    --equalBtnColor: var(--blackColor);
+    --equalBtnBCG: var(--togglePureCyan-keyBCG-Third);
+    --keyNumberColor: var(--textColor);
+    --keyNumberBCG: var(--veryDarkViolet-keyBCG-Third);
+    --keypadBCG: var(--screen--background);
+    --resetBtnBCG: var(--darkMagenta-keyShadow);
+    --delBtnBCG: var(--darkMagenta-keyShadow);
+    --themeToggleBtn: var(--equalBtnBCG);
+    --keyBoxShadow: 5px 5px 5px var(--delBtnBCG);
+}
